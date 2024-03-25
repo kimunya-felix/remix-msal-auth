@@ -5,6 +5,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import { AuthProvider } from "./components/auth";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -16,7 +17,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
+        <AuthProvider>
         {children}
+        </AuthProvider>
         <ScrollRestoration />
         <Scripts />
       </body>
