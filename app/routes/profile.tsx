@@ -14,7 +14,6 @@ const profile = () => {
     const authRequest = {
         ...loginRequest
     }
-
     return (
     <MsalAuthenticationTemplate
         interactionType={InteractionType.Popup}
@@ -24,6 +23,7 @@ const profile = () => {
     >
         <p>This is the profile page.</p>
         <p>At least one account is signed in!</p>
+
     </MsalAuthenticationTemplate>
   )
 }
